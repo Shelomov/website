@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mikhail Shelomov — Scientist, Investor</title>
+  <meta name="description" content="Scientist, Investor — Specialist in Biochemistry and Biotechnology (Moscow State University). Based in Moscow and Dubai." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root { --bg: #0b0b0e; --fg: #f6f6f7; --muted: #a3a3ad; --card: #111216; --line: #1e2026; --brand: #7c9aff; }
+    * { box-sizing: border-box; }
+    html, body { height: 100%; }
+    body { margin: 0; font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, sans-serif; background: linear-gradient(180deg, #0b0b0e, #111216); color: var(--fg); }
+    a { color: var(--fg); text-decoration: none; }
+
+    .container { max-width: 1100px; margin: 0 auto; padding: 0 16px; }
+    .section { padding: 56px 0; }
+    .grid.two { display: grid; grid-template-columns: 1fr; gap: 24px; }
+    @media (min-width: 820px) { .grid.two { grid-template-columns: 1fr 1fr; } }
+
+    .site-header { position: sticky; top: 0; backdrop-filter: blur(8px); background: rgba(11,11,14,0.6); border-bottom: 1px solid var(--line); z-index: 10; }
+    .header-inner { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 12px 0; }
+    .tagline { color: var(--muted); margin-top: 4px; font-size: 14px; }
+    .top-actions { display: flex; gap: 8px; }
+
+    .btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; padding: 10px 14px; border-radius: 14px; border: 1px solid #2a2d36; background: #171920; cursor: pointer; transition: transform .06s ease, box-shadow .2s ease; }
+    .btn:hover { transform: translateY(-1px); box-shadow: 0 6px 24px rgba(124,154,255,.18); }
+
+    .card { border: 1px solid var(--line); background: var(--card); border-radius: 18px; padding: 18px; }
+    .contacts ul { list-style: none; padding: 0; margin: 0; display: grid; gap: 10px; }
+    .contacts li { display: flex; align-items: baseline; justify-content: space-between; gap: 16px; }
+    .contacts li span { color: var(--muted); font-size: 14px; }
+    .contacts li a, .contacts li strong { font-weight: 600; }
+
+    .hero .lead { font-size: 18px; line-height: 1.7; color: #e9e9ee; }
+
+    .timeline { position: relative; margin: 24px 0 0; padding-left: 18px; }
+    .timeline::before { content: ""; position: absolute; left: 6px; top: 0; bottom: 0; width: 2px; background: var(--line); }
+    .timeline li { position: relative; margin: 0 0 20px 0; }
+    .timeline li::after { content: ""; position: absolute; left: -2px; top: 6px; width: 10px; height: 10px; border-radius: 50%; background: #9aa3b2; box-shadow: 0 0 0 4px #0b0b0e; }
+    .timeline-row { display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+    .timeline .period { color: var(--muted); font-size: 14px; }
+
+    .site-footer { border-top: 1px solid var(--line); padding: 24px 0; }
+    .footer-inner { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+    .socials { display: flex; gap: 16px; }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div>
+        <h1>Mikhail Shelomov</h1>
+        <p class="tagline">Scientist, Investor</p>
+      </div>
+      <nav class="top-actions">
+        <a class="btn" href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="section hero">
+      <div class="container grid two">
+        <div>
+          <p class="lead">
+            Scientist and investor passionate about chemistry, innovation, and biotechnology.
+            Based in Moscow, Russia and Dubai, UAE.
+          </p>
+        </div>
+        <aside class="card contacts">
+          <ul>
+            <li><span>Location</span><strong>Moscow, Russia / Dubai, UAE</strong></li>
+            <li><span>Email</span><a href="mailto:mikhail@shelomov.com">mikhail@shelomov.com</a></li>
+            <li><span>GitHub</span><a href="https://github.com/SSkarlath">@SSkarlath</a></li>
+            <li><span>Twitter</span><a href="https://twitter.com/Skarrlath">@Skarrlath</a></li>
+            <li><span>Telegram</span><a href="https://t.me/Skarlath">@Skarlath</a></li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section" id="timeline">
+      <div class="container">
+        <h2>Education</h2>
+        <ol class="timeline">
+          <li>
+            <div class="timeline-row">
+              <h3>Moscow State University · Department of Chemistry</h3>
+              <span class="period">2018–2023</span>
+            </div>
+            <p>PhD, specialist in Biochemistry and Biotechnology.</p>
+          </li>
+          <li>
+            <div class="timeline-row">
+              <h3>Moscow State University · Department of Chemistry</h3>
+              <span class="period">2012–2018</span>
+            </div>
+            <p>Master’s degree in Chemistry — focus on chemistry of living systems and nanobiotechnology.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <small>© <span id="year"></span> Mikhail Shelomov</small>
+      <div class="socials">
+        <a href="https://github.com/SSkarlath" target="_blank">GitHub</a>
+        <a href="https://twitter.com/Skarrlath" target="_blank">Twitter</a>
+        <a href="https://t.me/Skarlath" target="_blank">Telegram</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
